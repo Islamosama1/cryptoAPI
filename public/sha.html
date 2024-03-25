@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHA algorithm</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .box {
+        background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        width: 80%;
+        max-width: 500px;
+        box-shadow: 2px 2px 5px #888;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: #777;
+        margin-bottom: 20px;
+      }
+      input {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #333;
+        outline: none;
+      }
+      button {
+        background-color: #333;
+        color: #777;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+        transition: background-color 0.2s ease;
+      }
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+        color: #1e029c;
+      }
+      button:hover {
+        background-color: #555;
+      }
+      #encrypt-btn {
+        background: linear-gradient(to right, #84dafe, #203a43, #0f2027);
+      }
+      #decrypt-btn {
+        background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+      }
+      #reset-btn {
+        background: linear-gradient(to right, #544a7d, #ffd452);
+
+        color: #333;
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav nav--tours">
+        <a href="/" class="nav__el">HOME</a>
+      </nav>
+      <div class="header__logo">
+        <img src="img/logo-green-round.png" alt="Natours logo" />
+      </div>
+      <nav class="nav nav--user">
+        <a href="#" class="nav__el">DOCUMENTATION</a>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>SHA Algorithm</h1>
+      <div class="box">
+        <label for="plaintext">Text</label>
+        <input type="text" id="plaintext" />
+
+        <label for="ciphertext">Hashed Text</label>
+        <input type="text" id="ciphertext" />
+
+        <button id="encrypt-btn" onclick="hasshedFun()">Hash Text</button>
+        <button id="decrypt-btn" onclick="compareFun()">
+          Is Hashed text is same text
+        </button>
+        <button id="reset-btn" onclick="reset()">Reset</button>
+      </div>
+    </div>
+
+    <script src="./js/sha.js"></script>
+  </body>
+</html>
